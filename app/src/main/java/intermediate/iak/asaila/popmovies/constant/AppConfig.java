@@ -8,7 +8,7 @@ package intermediate.iak.asaila.popmovies.constant;
 public final class AppConfig {
 
     // API KEY
-    public final static String API_KEY_TMDB = "991b05476ddef403a30ebc306bc92161";
+    public final static String API_KEY_TMDB = "";
 
     // API IMG BASE URL
     private final static String IMG_BASE_OPTION_SIZE = "w185";
