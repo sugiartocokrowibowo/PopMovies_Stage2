@@ -3,8 +3,6 @@ package intermediate.iak.asaila.popmovies.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import java.io.Serializable;
-
 /**
  * Created by arisal on 28/05/17.
  * Movie Model
@@ -43,7 +41,7 @@ public class Movie implements Parcelable {
         dest.writeString(this.release_date);
     }
 
-    protected Movie(Parcel in) {
+    public Movie(Parcel in) {
         this.id = in.readLong();
         this.original_title = in.readString();
         this.poster_image = in.readString();

@@ -36,6 +36,28 @@ public class NetworkUtils {
         return url;
     }
 
+    /*
+     * Methods for fetching videos or reviews of a movie referenced
+     * by its id
+     */
+
+    public static URL buildReviewsOrVideosUrl(long movieId, String segment){
+        Uri builtUri = Uri.parse(AppConfig.API_BASE_URL)
+                .buildUpon()
+                .appendPath(PATH_MOVIE)
+                .appendPath(String.valueOf(movieId))
+                .appendPath(segment)
+                .appendQueryParameter(PARAM_API,AppConfig.API_KEY_TMDB)
+                .build();
+        URL url = null;
+        try {
+            url = new URL(builtUri.toString());
+        } catch (MalformedURLException e){
+            e.printStackTrace();
+        }
+        return url;
+    }
+
 
     public static String getResponseFromHttpUrl(URL url) throws IOException {
         HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();

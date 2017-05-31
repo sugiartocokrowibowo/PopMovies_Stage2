@@ -5,6 +5,7 @@
     <string name="favorite_movie">Favorited</string>
     <string name="action_settings">Settings</string>
     <string name="movie_detail">Movie Detail</string>
+    <string name="content_authority">intermediate.iak.asaila.popmovies</string>
 
     <!--- ERROR STRING -->
     <string name="no_internet_err">No Internet Connection Available</string>
@@ -22,7 +23,10 @@
 
     <string name="pref_title_favorited">@string/favorite_movie</string>
     <string name="pref_key_favorited" translatable="false">favorited</string>
-    <string name="mark_as_favorite">MARK AS FAVORITE</string>
+    <string name="mark_as_favorite">Favorite</string>
+    <string name="mark_as_unfavorite">Unfavorite</string>
     <string name="trailer">Trailer</string>
     <string name="poster_image">Poster Image</string>
+    <string name="no_data_err">Empty</string>
+    <string name="reviews">Reviews</string>
 </resources>

@@ -4,12 +4,16 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:android="http://schemas.android.com/apk/res/android">
-<LinearLayout android:layout_margin="8dp"
+<LinearLayout
+
+    android:background="@color/colorGray"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
         <LinearLayout
+
+            android:padding="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -45,28 +49,34 @@
 
                 <TextView
                     android:id="@+id/tv_rating"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimary"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:textSize="14sp" />
 
                 <Button
-
+                    android:background="@drawable/bg_favorite_button"
                     android:id="@+id/btn_favorite"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:maxEms="6"
                     android:text="@string/mark_as_favorite"
-                    android:textSize="12sp" />
+                    android:textSize="14sp" />
 
             </LinearLayout>
         </LinearLayout>
 
         <TextView
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:padding="8dp"
+            android:elevation="4dp"
+
+            android:background="@drawable/bg_rounded"
             android:id="@+id/tv_synopsis"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"/>
+            android:layout_height="wrap_content"/>
 
         <View
             android:id="@+id/vi_sep_1"
@@ -74,6 +84,74 @@
             android:layout_height="1dp"
             android:background="@color/colorGray"
             android:layout_marginTop="8dp" />
+
+        <TextView
+            android:gravity="center|left"
+            android:drawablePadding="5dp"
+            android:drawableLeft="@drawable/ic_play_arrow_black_24dp"
+            android:background="@color/colorLightGray"
+            android:text="@string/trailer"
+            android:padding="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <RelativeLayout
+            android:background="@color/colorWhite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_videos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+            <ProgressBar
+                android:visibility="invisible"
+                android:id="@+id/pb_video"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"/>
+            <TextView
+                android:padding="10dp"
+                android:visibility="invisible"
+                android:textSize="14sp"
+                android:id="@+id/tv_err_video"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+        <TextView
+            android:gravity="center|left"
+            android:drawablePadding="5dp"
+            android:drawableLeft="@drawable/ic_rate_review_black_24dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/colorLightGray"
+            android:text="@string/reviews"
+            android:padding="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_reviews"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    <ProgressBar
+        android:visibility="invisible"
+        android:id="@+id/pb_review"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+        <TextView
+            android:padding="10dp"
+            android:visibility="invisible"
+            android:textSize="14sp"
+            android:id="@+id/tv_err_review"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
     </LinearLayout>
 
 </android.support.v4.widget.NestedScrollView>
